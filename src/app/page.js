@@ -4,6 +4,7 @@ export default function Home() {
 	return (
 		<div className="container mx-auto p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 			<div className="relative">
+				<div className="pattern-bg"></div>
 				<div className="opacity-10">
 					<div className="absolute top-0 right-0 sm:w-[600px] sm:h-[600px] w-[300px] h-[300px] bg-purple-700/50 rounded-full blur-3xl"></div>
 					<div className="absolute top-4 right-4 sm:w-[400px] sm:h-[400px] w-[150px] h-[150px] bg-purple-500/60 rounded-full blur-2xl"></div>
@@ -23,7 +24,7 @@ export default function Home() {
 					<button className="px-8 py-3 rounded-lg font-medium bg-purple-700 hover:bg-purple-500">
 						About Me
 					</button>
-					<button className="px-8 py-3 rounded-lg font-medium border border-slate-600 hover:border-purple-500">
+					<button className="px-8 py-3 rounded-lg font-medium border bg-slate-900 border-slate-600 hover:border-purple-500">
 						Contact Me
 					</button>
 				</div>
