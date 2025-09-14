@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ProjectSection from "./components/ProjectSection";
 
 export default function Home() {
 	return (
@@ -9,7 +9,7 @@ export default function Home() {
 					<div className="absolute top-4 right-4 sm:w-[400px] sm:h-[400px] w-[150px] h-[150px] bg-purple-500/60 rounded-full blur-2xl"></div>
 					<div className="absolute top-8 right-8 sm:w-[300px] sm:h-[300px] w-[100px] h-[100px] bg-purple-400/70 rounded-full blur-xl"></div>
 				</div>
-				<h1 className="text-4xl font-bold tracking-light">
+				<h1 className="text-4xl font-bold tracking-light text-white">
 					Tori Rodgers{" "}
 					<span className="block text-purple-700">Software Developer</span>
 				</h1>
@@ -28,6 +28,7 @@ export default function Home() {
 					</button>
 				</div>
 			</div>
+			<ProjectSection />
 		</div>
 	);
 }
