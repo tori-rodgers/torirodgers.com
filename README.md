@@ -1,46 +1,20 @@
-<div align="center">
-  <img alt="Logo" src="/globe.svg" width="80" />
-</div>
-
 Welcome to the source code for [torirodgers.com](https://torirodgers.com) — a modern, responsive portfolio site built with [Next.js](https://nextjs.org/) and deployed with [Vercel](https://vercel.com/).
 
 ## 🙏 Credits
 
-This project was inspired by the tutorial from [webdecoded](https://youtu.be/K-hGb9W6wHc?si=MjqVDaYaXTlYQKfP).  
-Many thanks for the guidance and inspiration!
+This project was inspired by the tutorial from [webdecoded](https://youtu.be/K-hGb9W6wHc?si=MjqVDaYaXTlYQKfP). Many thanks for the guidance and inspiration!
 
 ## 🚨 Forking this repo
 
-You are welcome to use this code for your own portfolio, but **please give credit** to the original tutorial by[webdecoded](https://youtu.be/K-hGb9W6wHc?si=MjqVDaYaXTlYQKfP) and this repository. 
+You are welcome to use this code for your own portfolio, but **please give credit** to the original tutorial by [webdecoded](https://youtu.be/K-hGb9W6wHc?si=MjqVDaYaXTlYQKfP) and this repository. 
 
 ## 🛠 Installation & Set Up
 
-1. Clone the repository
-
-	```sh
-	git clone https://github.com/tori-rodgers/torirodgers.com.git
-	cd torirodgers.com
-	```
-
-2. Install dependencies
-
-	```sh
-	npm install
-	# or
-	yarn
-	# or
-	pnpm install
-	```
-
-3. Start the development server
-
-	```sh
-	npm run dev
-	# or
-	yarn dev
-	# or
-	pnpm dev
-	```
+1. Clone the repository: `git clone https://github.com/tori-rodgers/torirodgers.com.git`
+2. Navigate to the project directory: `cd torirodgers.com`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. Open your browser and visit `http://localhost:3000` to view the website.
 
 ## 🎨 Color Reference
 
