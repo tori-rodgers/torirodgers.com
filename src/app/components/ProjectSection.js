@@ -10,7 +10,7 @@ const ProjectSection = () => {
 			tags: ["NextJs", "React", "TailwindCSS"],
 			description: "portfolio website",
 			fullDescription:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+				"This is a portfolio website built using Next.js, React, and TailwindCSS. It showcases my projects, blog posts, and provides information about my skills and experience. The website is designed to be responsive and user-friendly, ensuring a seamless experience across all devices.",
 			image: "/portfolio.png",
 			techStack: ["NextJs", "React", "TailwindCSS", "Javascript"],
 		},
@@ -20,7 +20,7 @@ const ProjectSection = () => {
 			tags: ["NextJs", "React", "TailwindCSS"],
 			description: "Short description",
 			fullDescription:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+				"This is placeholder text for project 2. Replace this with an actual project description that highlights the key features, technologies used, and the purpose of the project.",
 			image: "/project2.png",
 			techStack: ["NextJs", "React", "TailwindCSS", "Javascript"],
 		},
@@ -30,7 +30,7 @@ const ProjectSection = () => {
 			tags: ["NextJs", "React", "TailwindCSS"],
 			description: "Short description",
 			fullDescription:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+				"This is placeholder text for project 3. Replace this with an actual project description that highlights the key features, technologies used, and the purpose of the project.",
 			image: "/project3.png",
 			techStack: ["NextJs", "React", "TailwindCSS", "Javascript"],
 		},
@@ -72,7 +72,7 @@ const ProjectSection = () => {
 	};
 
 	return (
-		<section id="projects" className="px-4 py-32 sm:px-6 lg:px-8">
+		<section id="projects" className="px-4 pt-32 pb-10 sm:px-6 lg:px-8">
 			<h2 className="text-3xl font-bold text-white mb-12 text-center">
 				Featured Projects
 			</h2>
