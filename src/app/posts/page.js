@@ -1,23 +1,42 @@
+import Header from '../components/Header';
+import Image from 'next/image';
 import Link from 'next/link';
-import { getAllPosts } from '@/lib/posts';
 
-export default function PostsPage() {
-  const posts = getAllPosts();
+async function getDevtoPosts() {
+  const res = await fetch('https://dev.to/api/articles?username=torirodgers&per_page=30', { next: { revalidate: 3600 } });
+  if (!res.ok) return [];
+  return res.json();
+}
 
+export default async function PostsPage() {
+  const posts = await getDevtoPosts();
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-6">All Posts</h1>
-      <ul className="space-y-4">
-        {posts.map(post => (
-          <li key={post.slug} className="border p-4 rounded bg-gray-800/30">
-            <Link href={`/posts/${post.slug}`} className="text-xl font-semibold hover:underline">
-              {post.title}
+    <div>
+      <Header />
+      <div className="container mx-auto p-8 pt-24">
+        <h1 className="text-3xl font-bold mb-8">All Posts</h1>
+        <div className="grid gap-8 md:grid-cols-2">
+          {posts.map(post => (
+            <Link key={post.id} href={`/posts/${post.slug}`} className="block rounded border border-gray-700/50 bg-gray-800/20 p-4 hover:shadow-lg transition">
+              <div className="flex gap-4 items-center">
+                {post.social_image && (
+                  <Image src={post.social_image} alt={post.title} width={100} height={100} className="rounded w-24 h-24 object-cover" unoptimized />
+                )}
+                <div>
+                  <div className="text-xl font-semibold mb-1">{post.title}</div>
+                  <div className="text-gray-400 text-sm mb-2">{post.readable_publish_date || post.published_at?.split('T')[0]}</div>
+                  <div className="text-gray-300 text-sm mb-2">{post.description}</div>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {post.tag_list.map(tag => (
+                      <span key={tag} className="px-2 py-0.5 text-xs rounded-full bg-purple-500/20 text-purple-200 border border-purple-500/30">#{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </Link>
-            <div className="text-sm text-gray-400">{post.date}</div>
-            <p className="mt-2 text-gray-300">{post.description}</p>
-          </li>
-        ))}
-      </ul>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
