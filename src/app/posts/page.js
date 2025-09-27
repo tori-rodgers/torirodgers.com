@@ -2,8 +2,10 @@ import Header from '../components/Header';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Lists all posts with styling
+
 async function getDevtoPosts() {
-  const res = await fetch('https://dev.to/api/articles?username=torirodgers&per_page=30', { next: { revalidate: 3600 } });
+  const res = await fetch('https://dev.to/api/articles?username=torirodgers', { next: { revalidate: 3600 } });
   if (!res.ok) return [];
   return res.json();
 }
@@ -25,7 +27,8 @@ export default async function PostsPage() {
                 <div>
                   <div className="text-xl font-semibold mb-1">{post.title}</div>
                   <div className="text-gray-400 text-sm mb-2">{post.readable_publish_date || post.published_at?.split('T')[0]}</div>
-                  <div className="text-gray-300 text-sm mb-2">{post.description}</div>
+                  <div className="text-gray-300 text-sm mb-2 whitespace-pre-line break-words">{post.description}</div>
+                  {/*  FIXME: description is getting cut off */}
                   <div className="flex flex-wrap gap-1 mt-2">
                     {post.tag_list.map(tag => (
                       <span key={tag} className="px-2 py-0.5 text-xs rounded-full bg-purple-500/20 text-purple-200 border border-purple-500/30">#{tag}</span>
